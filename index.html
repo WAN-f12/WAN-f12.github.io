@@ -1,11 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>yaorongke</title>
+	<title>我的博客</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>wanjie的个人主页</h1>
-    <h1>Hello world</h1>
+	<header class="header">
+		<h1>我的博客</h1>
+		<nav class="nav">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">关于我</a></li>
+				<li><a href="#">博客文章</a></li>
+				<li><a href="#">联系我</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<section class="intro">
+			<h2>欢迎来到我的博客</h2>
+			<p>我是一个热爱编程和写作的人，这里是我分享我的创意和想法的地方。请随意浏览我的博客文章，并留下您的评论。</p>
+		</section>
+
+		<section class="posts">
+			<h2>最新博客文章</h2>
+			<ul>
+				<li>
+					<a href="#">
+						<h3>如何写出好的博客文章</h3>
+						<p>在这篇文章中，我将分享我的写作技巧和经验，帮助您写出更好的博客文章。</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h3>学习Web开发的最佳资源</h3>
+						<p>作为一名经验丰富的Web开发人员，我将分享我在学习Web开发过程中使用的最佳资源和工具。</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h3>如何提高编程技能</h3>
+						<p>在这篇文章中，我将分享如何通过不断的练习和学习提高编程技能。</p>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p>版权所有 &copy; 2023 我的博客</p>
+	</footer>
 </body>
 </html>
+CSS代码：
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background-color: #222;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.header h1 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.nav li {
+	margin: 0 10px;
+}
+
+.nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.intro {
+	margin-bottom: 40px;
+}
+
+.intro h2 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.intro p {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.posts h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.posts ul {
+	list-style: none;
+}
+
+.posts li {
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.posts li:hover {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.posts h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.posts p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin
