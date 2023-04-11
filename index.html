@@ -1,150 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>我的博客</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    nav li:first-child {
+      margin-left: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #hero {
+      background-image: url('https://via.placeholder.com/1200x400');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 0;
+    }
+
+    #hero h2 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #fff;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #featured-posts {
+      background-color: #f9f9f9;
+      padding: 50px 0;
+    }
+
+    #featured-posts h3 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .posts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .post {
+      width: calc(33.33% - 20px);
+      margin-bottom: 40px;
+    }
+
+    .post img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .post h4 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .post p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #latest-posts {
+      padding: 50px 0;
+    }
+
+    #latest-posts h3 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #latest-posts .posts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    #latest
+          .post-card {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .post-card .content {
+      padding: 20px;
+    }
+
+    .post-card h4 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .post-card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+
+    .post-card .btn {
+      align-self: flex-end;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      nav li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .post-card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-	<header class="header">
-		<h1>我的博客</h1>
-		<nav class="nav">
-			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">关于我</a></li>
-				<li><a href="#">博客文章</a></li>
-				<li><a href="#">联系我</a></li>
-			</ul>
-		</nav>
-	</header>
+  <header>
+    <div class="container">
+      <h1>My Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-	<main class="container">
-		<section class="intro">
-			<h2>欢迎来到我的博客</h2>
-			<p>我是一个热爱编程和写作的人，这里是我分享我的创意和想法的地方。请随意浏览我的博客文章，并留下您的评论。</p>
-		</section>
+  <section id="hero">
+    <div class="container">
+      <h2>Welcome to My Blog</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus euismod, imperdiet lorem eget, gravida nisi. Nulla facilisi. Vestibulum et enim justo. Morbi dapibus est eget feugiat vehicula.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
 
-		<section class="posts">
-			<h2>最新博客文章</h2>
-			<ul>
-				<li>
-					<a href="#">
-						<h3>如何写出好的博客文章</h3>
-						<p>在这篇文章中，我将分享我的写作技巧和经验，帮助您写出更好的博客文章。</p>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h3>学习Web开发的最佳资源</h3>
-						<p>作为一名经验丰富的Web开发人员，我将分享我在学习Web开发过程中使用的最佳资源和工具。</p>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h3>如何提高编程技能</h3>
-						<p>在这篇文章中，我将分享如何通过不断的练习和学习提高编程技能。</p>
-					</a>
-				</li>
-			</ul>
-		</section>
-	</main>
-
-	<footer class="footer">
-		<p>版权所有 &copy; 2023 我的博客</p>
-	</footer>
-</body>
-</html>
-CSS代码：
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
-	background-color: #f5f5f5;
-}
-
-.header {
-	background-color: #222;
-	color: #fff;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.header h1 {
-	font-size: 36px;
-	margin-bottom: 10px;
-}
-
-.nav ul {
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-}
-
-.nav li {
-	margin: 0 10px;
-}
-
-.nav a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-}
-
-.container {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
-}
-
-.intro {
-	margin-bottom: 40px;
-}
-
-.intro h2 {
-	font-size: 30px;
-	margin-bottom: 10px;
-}
-
-.intro p {
-	font-size: 18px;
-	line-height: 1.5;
-}
-
-.posts h2 {
-	font-size: 24px;
-	margin-bottom: 20px;
-}
-
-.posts ul {
-	list-style: none;
-}
-
-.posts li {
-	margin-bottom: 20px;
-	background-color: #fff;
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-.posts li:hover {
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-}
-
-.posts h3 {
-	font-size: 20px;
-	margin-bottom: 10px;
-}
-
-.posts p {
-	font-size: 16px;
-	line-height: 1.5;
-	margin
+  <section id="featured-posts">
+    <div class="container">
+      <h3>Featured Posts</h3>
+      <div class="posts">
+        <div class="post">
+          <img src="https://via.placeholder.com/400x300" alt="Post Image">
+          <h4>Post Title 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus euismod, imperdiet lorem eget, gravida nisi. Nulla facilisi. Vestibulum et enim justo. Morbi dapibus est eget feugiat vehicula.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="post">
+          <img src="https://via.placeholder.com/400x300" alt="Post Image">
+          <h4>Post Title 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus euismod
